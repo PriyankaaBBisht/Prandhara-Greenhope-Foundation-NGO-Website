@@ -42,10 +42,12 @@ Green-Hope-Website/
 ├── package.json
 └── server.js
 ```
-
 ## Project Demo
 
-[Watch the website walkthrough on YouTube](https://youtu.be/AXeoHN1xq-A)
+Watch the website walkthrough:
+
+[![Green Hope NGO Website Demo](https://img.youtube.com/vi/AXeoHN1xq-A/0.jpg)](https://youtu.be/AXeoHN1xq-A)
+
 
 ## Contributions
 
