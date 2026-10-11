@@ -1,0 +1,731 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+/*  border: border-box;   this is wrong*/
+ /*to include border in height and width of the content */
+box-sizing: border-box;   /*this is right*/
+}
+/* .social-media-links {
+  height: 10px;
+  background-color: #f7e5bb;
+}
+
+.social-media-links {
+  color: white;              /*this is wrong : showing icons just below email, due to email
+  padding: 10px 20px;
+  margin: 0;
+} */ 
+/* WhatsApp floating icon */
+
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Explore Button */
+.dropbtn {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+/* Dropdown Box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 230px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.whatsapp-float1 {
+
+  position: absolute;
+
+  margin-left: 185px;
+  margin-top: 15px;
+
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  background: #25D366;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  transition: 0.3s ease;
+
+  z-index: 10;
+}
+
+.whatsapp-float1 img {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float1:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+.social-media-links {
+  background-color: #f7e5bb;
+  padding: 2px 20px;
+  font-size: 14px; 
+  color: RGB(44, 95, 45);
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔥 pushes icons to right */
+}
+
+.contact-number {
+  display: inline-block;   /* important for clean hover effect */
+  cursor: pointer;         /* shows it’s interactive */
+  text-decoration: none;
+}
+
+.contact-number:hover {
+  text-decoration: underline;
+}
+
+/*hover states*/
+.social-media-links a {
+  color: #2C5F2D;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.social-media-links a:link {
+  color: #2C5F2D;
+}
+
+.social-media-links a:visited {
+  color: #2C5F2D;
+}
+
+.social-media-links a:hover {
+  color: #1e4a1f;  /* slightly darker on hover */
+  text-decoration: underline;  /* underline only on hover */
+}
+
+.social-media-links a:active {
+  color: #2C5F2D;
+}
+
+
+.icons img {
+  width: 20px;   /* control icon size */
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icons img:hover {
+  transform: scale(1.2); /*icon grow effect*/
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar {
+  height: 50px;
+  background-color: rgb(43, 94, 44);
+  display: flex;
+  align-items: center;
+  padding-left: 15px; 
+
+  justify-content: space-between; /* 🔥 spreads logo + menu */
+
+  padding: 0 20px;
+
+  position: sticky;   /* 🔥 key */
+  top: 0;             /* stick to top */
+  z-index: 1000;      /* stay above everything */
+}
+
+.nav-logo{
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover{
+    transform: scale(1.08);
+}
+
+/* LOGO */
+
+.logo{
+    background-image: url("logo.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+}
+
+
+/* MOTO IMAGE */
+
+.moto-img{
+    background-image: url("moto-img.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: left center;
+
+    width: 135px;
+
+    height: 30px;
+}
+
+.border {
+  border: 2px solid transparent;
+}
+
+.border:hover {
+  border: 1.5px solid white; 
+
+}
+
+
+/* hero section image */
+.hero {
+  height: 608px;  
+  width: 100%; 
+
+background-size: cover;        
+   background-repeat: no-repeat;
+  background-image: 
+    linear-gradient(rgba(33, 66, 33, 0.6), rgba(33, 66, 33, 0.6)), /* 🔥 green overlay */
+    url("../images/home.jpg");
+}
+
+
+/*nav-menu*/
+
+.nav-menu a {
+  color: white;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.nav-menu-links a:link {
+  color: white;
+}
+
+.nav-menu-links a:visited {                            /*work more on this section*/
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: #FB8B24;  /* slightly darker on hover */
+  text-decoration: none;  /* underline only on hover */
+}
+
+.nav-menu-links a:active {
+  color: #FB8B24;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+}
+
+
+/* NAV LINKS */
+.nav-menu a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 6px;
+}
+
+/* Hidden underline by default */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: white;
+
+  box-shadow: 0 0 8px white,
+              0 0 12px white;
+}
+
+/* Underline ONLY for active page */
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+#welcomeTo {
+   font-family: 'Dancing Script', cursive;
+  color: azure;
+  font-size: 60px;
+  font-weight: lighter;
+  padding-top: 100px;
+  padding-left: 130px;
+  
+
+}
+
+#Prandhara  {
+  font-size: 80px; ;
+  color: azure;
+  font-weight: bolder;
+  padding-left: 160px;
+}
+
+#greenhope {
+  font-size: 60px; ;
+  color: azure;
+  font-weight: lighter;
+  padding-left: 160px;
+}
+
+#about {
+  color: azure;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 36px;
+  padding-left: 160px;
+  padding-top: 20px;
+}
+
+#read-more {
+  color: azure;
+  background-color: hsl(29, 96%, 56%);
+  height: 45px;
+  width: 125px;
+  text-align: center;
+  margin-left: 560px;
+  border-radius: 30px;
+  font-size: larger;
+  padding: 12px;
+ 
+
+}
+
+#read-more:hover {
+  background-color: hsl(29, 96%, 48%);
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* remove underline from link */
+#read-more a {
+  color: azure;
+  text-decoration: none;
+  display: block;
+
+}
+
+
+
+
+.home2 {
+  height: 606px;  /* adjust as needed */
+  width: 100%;
+  background-color: #f7e5bb;
+}
+
+#warli1 {
+   height: 200px;      /* control size here */
+  width: auto;       /* keeps aspect ratio */
+  object-fit: contain;
+  margin: 0;
+}
+
+/* #warli2 {
+   height: 150px;      
+  width: auto;       
+  object-fit: contain;
+}
+
+#warli3 {
+   height: 150px;      
+  width: auto;       
+  object-fit: contain;
+} */
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+  /* margin-left: 300px; */
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+#PrimaryWorkAreas {
+  font-weight: bold;
+  /* margin-top: 0%; */
+  padding: 0%;
+  font-size: larger;
+  line-height:35px ;
+   margin-left: 100px; 
+    text-indent: 30px;
+}
+
+#Wheading { 
+  display: flex;
+  position: relative;
+  align-items: center;   /* keeps them vertically aligned */
+  gap: 10px;   
+  /* margin-left: 100px;      */
+  margin: 0;
+}
+
+#paragraph {
+   margin-left: 100px; 
+   margin-top: 0%;
+
+}
+
+#work-with-us-img {
+  height: 800px;  /* adjust as needed */
+  width: 100%;
+  background-color: #f7e5bb;
+  display: block;
+  /* margin-top: 50px; */
+
+}
+
+/* PROJECT SECTION */
+
+#Projectdiv {
+  background-color: #f7e5bb;
+  padding: 60px 40px;
+}
+
+.project-heading {
+  text-align: center;
+  font-size: 50px;
+  color: #533b20;
+  margin-bottom: 40px;
+}
+
+.project-slider {
+  width: 90%;
+  margin: auto;
+  color: aliceblue;
+}
+
+.project-card {
+  
+  background: linear-gradient(
+  rgba(83, 48, 11, 0.85),
+  rgba(248, 178, 103, 0.85)
+);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 35px;
+  padding-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px #2C5F2D;
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin-top: 20px;
+  color:  #533b20;
+  font-size: 24px;
+  position: static;
+  transform: none;
+}
+
+.project-card p {
+  padding: 10px 20px;
+  line-height: 28px;
+}
+
+
+
+/* GALLERY SECTION */
+
+#gallery-section {
+  background-color: #2C5F2D;
+  padding: 60px 40px;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-size: 42px;
+  color:hsl(29, 96%, 56%);
+  margin-bottom: 50px;
+}
+
+/* CSS GRID */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 25px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.08);
+}
+
+
+
+/* VOLUNTEER SECTION */
+
+#volunteer-section {
+  background-color: #f7e5bb;
+
+  /* padding: 100px 40px; */
+
+  text-align: center;
+}
+
+.volunteer-content {
+  max-width: 800px;
+
+  margin: auto;
+
+  height: 450px;
+  padding-top: 80px;
+  
+}
+
+.volunteer-content h2 {
+
+
+  font-size: 50px;
+
+  color: #2C5F2D;
+
+  margin-bottom: 30px;
+}
+
+.volunteer-content p {
+  font-size: 22px;
+
+  line-height: 40px;
+
+  color: #333;
+
+  margin-bottom: 40px;
+}
+
+.volunteer-btn {
+  display: inline-block;
+
+  background-color: #FB8B24;
+
+  color: white;
+
+  padding: 18px 40px;
+  
+  margin-bottom: 40px;
+
+  font-size: 20px;
+
+  text-decoration: none;
+
+  border-radius: 40px;
+
+  transition: 0.3s ease;
+}
+
+.volunteer-btn:hover {
+  background-color: #d96f10;
+
+  transform: scale(1.05);
+}
+
+
+/* FOOTER SECTION */
+
+#footer {
+  background-color: #214212;
+
+  color: #f7e5bb;
+
+  /* padding: 60px 40px 20px; */
+}
+
+/* TOP CONTENT */
+
+.footer-container {
+  display: flex;
+
+  /* gap : 10px; */
+
+  /* justify-content: space-between; */
+
+  align-items: center;
+
+  flex-wrap: nowrap;
+
+  gap: 200px;
+  
+
+  /* margin-bottom: 50px; */
+}
+
+/* LEFT SIDE */
+
+/* .footer-left {
+  /* text-align: center; */
+
+
+.qr-image {
+  width: 120px;
+
+  height: 120px;
+
+  background-color:#f7e5bb;
+
+  object-fit: fill;
+  margin-top: 20px;
+}
+
+.footer-left p {
+  /* margin-top: 15px; */
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+/* RIGHT SIDE */
+
+.footer-right {
+  max-width: 600px;
+}
+
+.footer-right h2 {
+  font-size: 12px;
+
+  color: #FB8B24;
+
+  /* margin-bottom: 25px; */
+}
+
+.footer-right p {
+  font-size: 18px;
+
+  line-height: 35px;
+}
+
+.contact-info {
+  margin-top: 0px;
+  text-align: left;
+}
+
+/* WARLI ART SECTION */
+
+.footer-warli-container {
+  margin-top: 50px;
+  display:flex;
+  object-fit:fill;
+
+  justify-content:start;
+
+  /* gap: 20px; */
+
+  flex-wrap: nowrap;
+}
+
+.footer-warli {
+  width: 50%;
+
+  height: 180px;
+
+  object-fit: fill;
+
+  /* border-radius: 10px; */
+
+  display: block;
+}
+
+#warlifoot1 {
+  margin-top: 30px;
+  width: 50%;
+  height: 150px;
+  object-fit: fill;
+  display: block;
+}
+
+

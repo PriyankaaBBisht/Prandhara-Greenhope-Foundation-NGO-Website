@@ -1,0 +1,805 @@
+/* ========================================================
+   PRANDHARA GREEN HOPE FOUNDATION - SHARED PAGES STYLESHEET
+   ======================================================== */
+
+:root {
+  --primary-green: #2C5F2D;
+  --dark-green: #18330f;
+  --accent-gold: #e5a93c;
+  --accent-orange: #FB8B24;
+  --accent-orange-hover: #d96f10;
+  --bg-sand: #f7e5bb;
+  --white: #ffffff;
+  --dark-gray: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-sand);
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+/* ========================================================
+   TOP BAR & NAVIGATION MENU (UNIFIED STYLE)
+   ======================================================== */
+
+.social-media-links {
+  background-color: var(--bg-sand);
+  padding: 8px 20px;
+  font-size: 14px; 
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-media-links a {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-media-links a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+.whatsapp-float1 {
+  background: #25D366;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.whatsapp-float1 img {
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 !important;
+}
+
+.whatsapp-float1:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  height: 60px;
+  background-color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  background-image: url("../css/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 45px;
+  height: 45px;
+}
+
+.moto-img {
+  background-image: url("../css/moto-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 135px;
+  height: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--accent-orange);
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--white);
+  transition: width 0.3s;
+  box-shadow: 0 0 8px var(--white);
+}
+
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 240px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  border-top: 3px solid var(--accent-gold);
+}
+
+.dropdown-content a {
+  color: var(--dark-gray) !important;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-content a::after {
+  display: none !important;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+  color: var(--primary-green) !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ========================================================
+   HERO / BANNER COMPONENT
+   ======================================================== */
+
+.page-hero {
+  height: 280px;
+  background-image: linear-gradient(rgba(33, 66, 33, 0.75), rgba(33, 66, 33, 0.75)), url("../images/home.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+}
+
+.page-hero h1 {
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.page-hero p {
+  margin-top: 12px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ========================================================
+   SHARED GENERAL GRID & PAGE CONTAINER
+   ======================================================== */
+
+.main-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ========================================================
+   1. SOLAR ENERGY DETAILS (solar.html)
+   ======================================================== */
+
+.solar-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media(max-width: 992px) {
+  .solar-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.solar-text h2 {
+  font-size: 32px;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+}
+
+.solar-text p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.solar-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.stat-box {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--accent-gold);
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 32px;
+  color: var(--primary-green);
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.solar-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  object-fit: cover;
+  height: 450px;
+}
+
+/* ========================================================
+   2. DONATIONS ALLOCATIONS (donations.html)
+   ======================================================== */
+
+.allocation-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.allocation-intro h2 {
+  font-size: 32px;
+  color: var(--primary-green);
+  margin-bottom: 15px;
+}
+
+.allocation-intro p {
+  font-size: 18px;
+}
+
+.allocation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media(max-width: 992px) {
+  .allocation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.charts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.chart-row {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-left: 5px solid var(--primary-green);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.chart-label {
+  color: var(--primary-green);
+}
+
+.chart-percentage {
+  color: var(--accent-orange);
+}
+
+.progress-bar-bg {
+  height: 14px;
+  background-color: #eee;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 7px;
+  background-image: linear-gradient(to right, var(--primary-green), var(--accent-gold));
+  transition: width 1.5s ease-in-out;
+}
+
+/* ========================================================
+   3. DYNAMIC DONORS Honors (donors.html)
+   ======================================================== */
+
+.donor-search-box {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.donor-search-box input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.donor-search-box input:focus {
+  border-color: var(--primary-green);
+}
+
+.table-wrapper {
+  background-color: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.donor-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.donor-table th {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 18px 24px;
+  font-weight: bold;
+}
+
+.donor-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.donor-table tr:hover td {
+  background-color: #fcfcfc;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-gold {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.badge-silver {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.badge-bronze {
+  background-color: #ffedd5;
+  color: #ea580c;
+}
+
+/* ========================================================
+   4. MEMBER REGISTRATION & ID CARD PREVIEW
+   ======================================================== */
+
+.member-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+@media(max-width: 992px) {
+  .member-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-card {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-card h2 {
+  font-size: 28px;
+  color: var(--primary-green);
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media(max-width: 576px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-green);
+}
+
+.avatar-selector {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.avatar-card {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.avatar-card.selected {
+  border-color: var(--accent-gold);
+  transform: scale(1.1);
+}
+
+.avatar-card span {
+  font-size: 28px;
+}
+
+.field-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error {
+  border-color: red !important;
+}
+
+.submit-btn {
+  background-color: var(--accent-orange);
+  color: var(--white);
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 15px;
+  box-shadow: 0 6px 18px rgba(251, 139, 36, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-orange-hover);
+  transform: translateY(-2px);
+}
+
+.form-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ========================================================
+   5. ID CARD DOWNLOAD / GENERATOR CONTAINER
+   ======================================================== */
+
+.card-generator-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-card {
+  width: 100%;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.search-card h2 {
+  font-size: 26px;
+  color: var(--primary-green);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search-card p {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.card-preview-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.canvas-card-wrap {
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  background-color: var(--dark-green);
+}
+
+.canvas-card-wrap canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.download-action-btn {
+  background-color: var(--accent-orange);
+  color: var(--white);
+  padding: 16px 40px;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(251, 139, 36, 0.35);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.download-action-btn:hover {
+  background-color: var(--accent-orange-hover);
+  transform: scale(1.05);
+}
+
+/* ========================================================
+   UNIFIED FOOTER
+   ======================================================== */
+
+#footer {
+  background-color: var(--dark-green);
+  color: var(--bg-sand);
+  padding-top: 40px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left {
+  text-align: center;
+}
+
+.qr-image {
+  width: 110px;
+  height: 110px;
+  background-color: var(--bg-sand);
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.footer-left p {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.footer-mid {
+  max-width: 400px;
+}
+
+.footer-mid h3 {
+  color: var(--accent-orange);
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.footer-mid p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-right p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-social {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social img {
+  width: 22px;
+  filter: brightness(5);
+  transition: 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+.footer-warli-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-warli {
+  width: 50%;
+  height: 160px;
+  object-fit: fill;
+}
+
+.footer-bottom {
+  background-color: #0f210a;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: var(--bg-sand);
+}

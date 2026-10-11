@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  color: #333;
+}
+
+/* 🔥 GLASS NAVBAR */
+.glass {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.2);
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #1b5e20;
+}
+
+/* 🌟 HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to right, #43a047, #66bb6a);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+/* 🎯 BUTTONS */
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.primary {
+  background: white;
+  color: #2e7d32;
+}
+
+.secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* 💎 CARDS */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 250px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* 💰 DONATION */
+.donation {
+  text-align: center;
+  padding: 50px;
+  background: #c8e6c9;
+}
+
+/* 💬 WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* 📱 RESPONSIVE */
+@media(max-width: 768px){
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | Prandhara Green Hope Foundation</title>
+  <link rel="stylesheet" href="css/style5.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <!-- 1. creating navigation bar-->
+
+  <div class="social-media-links">
+  <p>Contact Us: +91 7559281109 / +91 9270945210</p>
+  
+  <!-- WhatsApp Button -->
+  <a class="whatsapp-float1"
+   href="https://wa.me/919270945210" target="_blank">
+  <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+  <p>Email: <a href="mailto:prandhara@gmail.com">prandhara@gmail.com</a></p>
+  
+  <div class="icons">
+    <a href="https://instagram.com" target="_blank">
+      <img src="icons/instagram.svg" alt="Instagram">
+    </a>
+
+    <a href="https://facebook.com" target="_blank">
+      <img src="icons/facebook.svg" alt="Facebook">
+    </a>
+
+    <a href="https://linkedin.com" target="_blank">
+      <img src="icons/linkedin.svg" alt="LinkedIn">
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+      <img src="icons/twitter.svg" alt="Twitter">
+    </a>
+
+    <a href="https://youtube.com" target="_blank">
+      <img src="icons/youtube.svg" alt="YouTube">
+    </a>
+  </div>
+
+</div>
+      
+
+  <a href="index.html">
+    <div class="navbar">
+    <div class="nav-logo">
+      <div class="logo"> </div>
+      <div class="moto-img"></div>
+    </div> </a>
+    <!--nav-menu-->
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="management.html">Our Management Team</a>
+      <a href="projects.html">Our Projects</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="volunteer.html" class="active">Volunteer</a>
+      <!-- Explore Dropdown -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Explore</a>
+        <div class="dropdown-content">
+          <a href="donations.html">Where Your Donations Go?</a>
+          <a href="solar.html">Solar Energy</a>
+          <a href="projects.html">Tree Plantation Drives</a>
+        </div>
+      </div>
+      <a href="member-apply.html">Member Apply</a>
+      <a href="id-download.html">ID Card Download</a>
+      <a href="donors.html">List Of Donors</a>
+    </div>
+
+  </div>
+
+
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Join As Volunteer</h1>
+    <p>Be the change — help us build a greener tomorrow</p>
+  </div>
+
+  <!-- VOLUNTEER SECTION -->
+  <section class="volunteer-page-section">
+
+    <div class="volunteer-intro animate-on-scroll">
+      <h2>Why Volunteer With Us?</h2>
+      <div class="why-grid">
+        <div class="why-card">🌳<h4>Make an Impact</h4><p>Directly contribute to tree plantations, clean-up drives, and awareness campaigns.</p></div>
+        <div class="why-card">🤝<h4>Build Community</h4><p>Connect with like-minded individuals who share a passion for the environment.</p></div>
+        <div class="why-card">📚<h4>Learn & Grow</h4><p>Gain knowledge about environmental conservation, sustainability, and community leadership.</p></div>
+        <div class="why-card">🏆<h4>Get Recognized</h4><p>Receive certificates of appreciation and recognition for your contributions.</p></div>
+      </div>
+    </div>
+
+    <div class="volunteer-form-wrap animate-on-scroll">
+      <h2>Volunteer Registration Form</h2>
+      <form id="volunteerForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vName">Full Name *</label>
+            <input type="text" id="vName" placeholder="Your full name" required>
+            <span class="field-error" id="errVName"></span>
+          </div>
+          <div class="form-group">
+            <label for="vAge">Age *</label>
+            <input type="number" id="vAge" placeholder="Your age" min="16" max="80" required>
+            <span class="field-error" id="errVAge"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vEmail">Email Address *</label>
+            <input type="email" id="vEmail" placeholder="your@email.com" required>
+            <span class="field-error" id="errVEmail"></span>
+          </div>
+          <div class="form-group">
+            <label for="vPhone">Phone Number *</label>
+            <input type="tel" id="vPhone" placeholder="+91 XXXXX XXXXX" required>
+            <span class="field-error" id="errVPhone"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="vCity">City / District *</label>
+          <input type="text" id="vCity" placeholder="Your city" required>
+          <span class="field-error" id="errVCity"></span>
+        </div>
+        <div class="form-group">
+          <label>Areas of Interest *</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" name="interest" value="plantation"> Tree Plantation</label>
+            <label class="checkbox-label"><input type="checkbox" name="interest" value="cleanup"> Clean-Up Drives</label>
+            <label class="checkbox-label"><input type="checkbox" name="interest" value="awareness"> Awareness Programs</label>
+            <label class="checkbox-label"><input type="checkbox" name="interest" value="water"> Water Conservation</label>
+            <label class="checkbox-label"><input type="checkbox" name="interest" value="education"> Environmental Education</label>
+            <label class="checkbox-label"><input type="checkbox" name="interest" value="social"> Social Media & Outreach</label>
+          </div>
+          <span class="field-error" id="errVInterest"></span>
+        </div>
+        <div class="form-group">
+          <label for="vAvail">Availability</label>
+          <select id="vAvail">
+            <option value="">Select availability</option>
+            <option>Weekdays</option>
+            <option>Weekends</option>
+            <option>Both</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="vMsg">Why do you want to volunteer?</label>
+          <textarea id="vMsg" rows="4" placeholder="Tell us your motivation..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Application</button>
+        <div id="vFormSuccess" class="form-success" style="display:none;">
+          🌿 Thank you for signing up! We'll contact you within 48 hours with next steps.
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  
+    <!-- FOOTER SECTION -->
+
+<footer id="footer">
+
+  <!-- Top Footer Content -->
+
+  <div class="footer-container">
+
+    <!-- Left Side -->
+
+    <div class="footer-left">
+
+      <img src="images/qr-code.png" alt="QR Code" class="qr-image">
+
+      <p>Scan to Donate</p>
+
+    </div>
+
+    <!-- Center Side -->
+
+    <div class="footer-mid">
+
+      <h3>Prandhara Green Hope Foundation</h3>
+
+      <p>
+        Pethe Nagar Road, Near Aamen Chauk, <br>
+        Shravasti Colony, Bhawsinghpura, <br>
+        Aurangabad, Maharashtra - 431001
+      </p>
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="footer-right">
+
+      <p class="contact-info">
+        Call: +91 7559281109 / +91 9270945210 <br>
+        Email: prandhara@gmail.com
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom Warli Art Images -->
+
+  <div class="footer-warli-container">
+
+    <img id="warlifoot1" src="images/warli-footer1.png" alt="Warli Art" class="footer-warli">
+
+    <img src="images/warli-footer2.png" alt="Warli Art" class="footer-warli">
+
+  </div>
+
+  <!-- Footer Bottom -->
+
+  <div class="footer-bottom" style="background:#18330f; text-align:center; padding:12px; font-size:13px; color:#f7e5bb; width:100%;">
+    <p>&copy; 2026 Prandhara Green Hope Foundation. All Rights Reserved.</p>
+  </div>
+
+</footer>
+
+<!--java script-->>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      document.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+      document.querySelectorAll('.form-group input, .form-group textarea').forEach(el => el.classList.remove('error'));
+
+      const name = document.getElementById('vName');
+      const age = document.getElementById('vAge');
+      const email = document.getElementById('vEmail');
+      const phone = document.getElementById('vPhone');
+      const city = document.getElementById('vCity');
+      const interests = document.querySelectorAll('input[name="interest"]:checked');
+
+      if (!name.value.trim()) { document.getElementById('errVName').textContent = 'Name is required.'; name.classList.add('error'); valid = false; }
+      if (!age.value || age.value < 16) { document.getElementById('errVAge').textContent = 'Age must be at least 16.'; age.classList.add('error'); valid = false; }
+      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { document.getElementById('errVEmail').textContent = 'Valid email required.'; email.classList.add('error'); valid = false; }
+      if (!phone.value.trim()) { document.getElementById('errVPhone').textContent = 'Phone number is required.'; phone.classList.add('error'); valid = false; }
+      if (!city.value.trim()) { document.getElementById('errVCity').textContent = 'City is required.'; city.classList.add('error'); valid = false; }
+      if (interests.length === 0) { document.getElementById('errVInterest').textContent = 'Please select at least one area of interest.'; valid = false; }
+
+      if (valid) {
+        document.getElementById('vFormSuccess').style.display = 'block';
+        this.reset();
+        window.scrollTo({ top: document.getElementById('vFormSuccess').offsetTop - 100, behavior: 'smooth' });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Membership | Prandhara Green Hope Foundation</title>
+  <meta name="description" content="Apply as an official member of Prandhara Green Hope Foundation and get your digital Identity Card. Join our forest conservation and clean energy campaign.">
+  <link rel="stylesheet" href="css/style-pages.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Contact/Social Header Bar -->
+  <div class="social-media-links">
+    <p class="contact-number">Contact Us: +91 7559281109 / +91 9270945210</p>
+    
+    <!-- WhatsApp Floating Badge -->
+    <a class="whatsapp-float1" href="https://wa.me/919270945210" target="_blank" aria-label="Chat on WhatsApp">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+    
+    <p>Email: <a href="mailto:prandhara@gmail.com">prandhara@gmail.com</a></p>
+    
+    <div class="icons">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <img src="icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <img src="icons/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <img src="icons/youtube.svg" alt="YouTube">
+      </a>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Prandhara Green Hope Foundation Home">
+      <div class="logo"></div>
+      <div class="moto-img"></div>
+    </a>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="management.html">Our Management Team</a>
+      <a href="projects.html">Our Projects</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="volunteer.html">Volunteer</a>
+      
+      <!-- Explore Dropdown -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Explore</a>
+        <div class="dropdown-content">
+          <a href="donations.html">Where Your Donations Go?</a>
+          <a href="solar.html">Solar Energy</a>
+          <a href="projects.html">Tree Plantation Drives</a>
+        </div>
+      </div>
+      
+      <a href="member-apply.html" class="active">Member Apply</a>
+      <a href="id-download.html">ID Card Download</a>
+      <a href="donors.html">List Of Donors</a>
+    </div>
+  </div>
+
+  <!-- Page Hero Banner -->
+  <div class="page-hero">
+    <h1>Member Registration</h1>
+    <p>Become an official custodian of the earth — join the Prandhara core force today</p>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+    <div class="member-split">
+      
+      <!-- Left Column: Member benefits -->
+      <section class="solar-text">
+        <h2>Why Join As a Member?</h2>
+        <p>
+          Members form the visionary core of Prandhara Green Hope Foundation. As an official registered member, you are directly involved in organizing tree plantation drives, leading eco-clubs, and coordinating environmental awareness events across Maharashtra.
+        </p>
+        <p><strong>Exclusive Privileges for Prandhara Members:</strong></p>
+        <ul style="margin-left: 20px; margin-bottom: 25px; list-style-type: square; line-height: 1.8;">
+          <li>Receive a unique, verifiable digital **Official Identity Card**.</li>
+          <li>Right to vote in our annual environmental planning committee.</li>
+          <li>Certificate of Active Service for leading local tree plantation blocks.</li>
+          <li>Access to our exclusive seed vaults and planting nurseries.</li>
+          <li>Invitations to premium state-level sustainability forums and seminars.</li>
+        </ul>
+        <p style="font-size: 14px; color: #555; background: rgba(229,169,60,0.15); padding: 15px; border-radius: 8px;">
+          🌿 <em>Membership is completely free for all environment-loving citizens above 18. We expect members to attend at least three field events annually.</em>
+        </p>
+      </section>
+
+      <!-- Right Column: Registration form -->
+      <section class="form-card">
+        <h2>Apply For Membership</h2>
+        <form id="memberForm" novalidate>
+          
+          <div class="form-group">
+            <label for="mName">Full Name *</label>
+            <input type="text" id="mName" placeholder="Your official full name" required>
+            <span class="field-error" id="errMName"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mEmail">Email Address *</label>
+              <input type="email" id="mEmail" placeholder="your@email.com" required>
+              <span class="field-error" id="errMEmail"></span>
+            </div>
+            <div class="form-group">
+              <label for="mPhone">Phone Number *</label>
+              <input type="tel" id="mPhone" placeholder="+91 XXXXX XXXXX" required>
+              <span class="field-error" id="errMPhone"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mBlood">Blood Group *</label>
+            <select id="mBlood" required>
+              <option value="" disabled selected>-- Select Blood Group --</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+            <span class="field-error" id="errMBlood"></span>
+          </div>
+
+          <!-- Custom Avatar Picker -->
+          <div class="form-group">
+            <label>Select Your ID Card Avatar Profile *</label>
+            <input type="hidden" id="mAvatar" value="avatar1">
+            
+            <div class="avatar-selector">
+              <!-- Avatar 1 -->
+              <div class="avatar-card selected" data-avatar="avatar1" title="Professional Male with glasses">
+                <span>👨‍💼</span>
+              </div>
+              <!-- Avatar 2 -->
+              <div class="avatar-card" data-avatar="avatar2" title="Professional Female long hair">
+                <span>👩‍💼</span>
+              </div>
+              <!-- Avatar 3 -->
+              <div class="avatar-card" data-avatar="avatar3" title="Eco Male with green shirt">
+                <span>👨‍🌾</span>
+              </div>
+              <!-- Avatar 4 -->
+              <div class="avatar-card" data-avatar="avatar4" title="Eco Female active member">
+                <span>👩‍🌾</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Apply Now</button>
+
+          <!-- Success banner, toggled dynamically by script -->
+          <div id="mFormSuccess" class="form-success" style="display: none;"></div>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Unified Footer Section -->
+  <footer id="footer">
+    <div class="footer-container">
+      
+      <!-- Left Side - Scan to Donate -->
+      <div class="footer-left">
+        <img src="images/qr-code.png" alt="Scan to Donate QR Code" class="qr-image" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=prandhara@upi'">
+        <p>Scan to Donate</p>
+      </div>
+
+      <!-- Center Side - Address info -->
+      <div class="footer-mid">
+        <h3>Prandhara Green Hope Foundation</h3>
+        <p>
+          Pethe Nagar Road, Near Aamen Chauk,<br>
+          Shravasti Colony, Bhawsinghpura,<br>
+          Aurangabad, Maharashtra - 431001
+        </p>
+      </div>
+
+      <!-- Right Side - Contacts & Social Links -->
+      <div class="footer-right">
+        <p class="contact-info">
+          Call: +91 7559281109 / +91 9270945210<br>
+          Email: prandhara@gmail.com
+        </p>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="icons/instagram.svg" alt="Instagram"></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="icons/facebook.svg" alt="Facebook"></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Warli Art Strip -->
+    <div class="footer-warli-container">
+      <img id="warlifoot1" src="images/warli-footer1.png" alt="Warli Art Border Decor" class="footer-warli" onerror="this.style.display='none'">
+      <img src="images/warli-footer2.png" alt="Warli Art Border Decor" class="footer-warli" onerror="this.style.display='none'">
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Prandhara Green Hope Foundation. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Linkage -->
+  <script src="js/script.js"></script>
+</body>
+</html>

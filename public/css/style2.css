@@ -1,0 +1,715 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+/*  border: border-box;   this is wrong*/
+ /*to include border in height and width of the content */
+box-sizing: border-box;   /*this is right*/
+}
+
+#loader{    /*page loader */
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #f7e5bb;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+
+/* SPINNER */
+
+.spinner{
+
+    width: 70px;
+    height: 70px;
+
+    border: 8px solid #d9d9d9;
+
+    border-top: 8px solid #2C5F2D;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin{
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* WhatsApp floating icon */
+.whatsapp-float1 {
+
+  position: absolute;
+
+  margin-left: 185px;
+  margin-top: 15px;
+
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  background: #25D366;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  transition: 0.3s ease;
+
+  z-index: 10;
+}
+
+.whatsapp-float1 img {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float1:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+
+
+/* *{
+    border: 1px solid red;
+} */
+
+.social-media-links {
+  background-color: #f7e5bb;
+  padding: 2px 20px;
+  font-size: 14px; 
+  color: RGB(44, 95, 45);
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔥 pushes icons to right */
+}
+
+.social-media-links p {
+  margin: 0;   /* remove default spacing */
+}
+
+/*hover states*/
+.social-media-links a {
+  color: #2C5F2D;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.social-media-links a:link {
+  color: #2C5F2D;
+}
+
+.social-media-links a:visited {
+  color: #2C5F2D;
+}
+
+.social-media-links a:hover {
+  color: #1e4a1f;  /* slightly darker on hover */
+  text-decoration: underline;  /* underline only on hover */
+}
+
+.social-media-links a:active {
+  color: #2C5F2D;
+}
+
+
+.icons img {
+  width: 20px;   /* control icon size */
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icons img:hover {
+  transform: scale(1.2); /*icon grow effect*/
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar {
+  height: 50px;
+  background-color: rgb(43, 94, 44);
+  display: flex;
+  align-items: center;
+  padding-left: 15px; 
+
+  justify-content: space-between; /* 🔥 spreads logo + menu */
+
+  padding: 0 20px;
+
+  position: sticky;   /* 🔥 key */
+  top: 0;             /* stick to top */
+  z-index: 1000;      /* stay above everything */
+}
+
+.nav-logo{
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover{
+    transform: scale(1.08);
+}
+
+
+/* LOGO */
+
+.logo{
+    background-image: url("logo.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+}
+
+
+/* MOTO IMAGE */
+
+.moto-img{
+    background-image: url("moto-img.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: left center;
+
+    width: 135px;
+
+    height: 30px;
+}
+
+.border {
+  border: 2px solid transparent;
+}
+
+.border:hover {
+  border: 1.5px solid white; 
+
+}
+
+
+
+
+/*nav-menu*/
+
+.nav-menu a {
+  color: white;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.nav-menu-links a:link {
+  color: white;
+}
+
+.nav-menu-links a:visited {                            /*work more on this section*/
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: #FB8B24;  /* slightly darker on hover */
+  text-decoration: none;  /* underline only on hover */
+}
+
+.nav-menu-links a:active {
+  color: #FB8B24;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* NAV LINKS */
+.nav-menu a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 6px;
+}
+
+/* Hidden underline by default */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: white;
+
+  box-shadow: 0 0 8px white,
+              0 0 12px white;
+}
+
+/* Underline ONLY for active page */
+.nav-menu a.active::after {
+  width: 100%;
+}
+/* .imgh{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../images/home2.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+.imgh{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../images/home2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.about-overlay{
+    position: absolute;
+
+    left: 50%;
+    bottom: -100%;
+
+    transform: translateX(-50%);
+
+    width: 85%;
+    max-width: 1100px;
+    height: 550px;
+
+    background: rgba(251, 230, 184, 0.6);
+
+    color: #533b20;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    animation: slideUp 2s ease forwards;
+
+    backdrop-filter: blur(5px);
+}
+
+.about-overlay h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-overlay p{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+@keyframes slideUp{
+
+    from{
+        bottom: -100%;
+        opacity: 0;
+    }
+
+    to{
+        bottom: 40px;
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
+.mission-vision-container{
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 80px 40px;
+
+    flex-wrap: wrap;
+
+    background-color: #f7e5bb;
+}
+
+
+
+
+.vision-section{
+
+    width: 100%;
+
+    /* min-height: 10vh; */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 200px;
+
+    /* padding: 60px; */
+
+    background-color: #f7e5bb; 
+
+    overflow: hidden;
+
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+
+
+/* BOTH DIVS SAME SIZE */
+
+.vision-image,
+.vision-text{
+
+    width: 500px;
+
+    height: 400px;
+}
+
+
+/* IMAGE DIV */
+
+.vision-image{
+
+    opacity: 0;
+}
+
+.vision-image img{
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    display: inline;
+}
+
+
+/* TEXT DIV */
+
+.vision-text{
+
+    background:;
+
+    color:  #2C5F2D;
+
+    /* padding: 40px; */
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+   
+}
+
+.vision-text h2{
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+
+    color:  #2C5F2D;
+}
+
+.vision-text p{
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes slideFromLeft{
+
+    from{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideFromRight{
+
+    from{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.vision-image{
+    width: 500px;
+    height: 400px;
+
+    opacity: 0;
+}
+
+.vision-text{
+    width: 500px;
+    height: 400px;
+
+    opacity: 0;
+}
+
+
+/* ACTIVE ANIMATIONS */
+
+.vision-image.show{
+    animation: slideFromLeft 1.5s ease forwards;
+}
+
+.vision-text.show{
+    animation: slideFromRight 1.5s ease forwards;
+}
+
+
+
+
+
+.mission-section{
+
+    width: 100%;
+
+     
+height: 200px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 200px;
+
+    padding-top: 45px;
+
+    background-color: #f7e5bb;
+
+    overflow: hidden;
+
+    flex-wrap: wrap;
+
+    margin-top: 0%;
+
+    /* padding-bottom: 50px; */
+}
+
+
+/* SAME SIZE */
+
+.mission-text,
+.mission-image{
+
+    width: 450px;
+height: 200px;
+}
+
+
+/* TEXT */
+
+.mission-text{
+
+    background: #f7e5bb;
+
+    color:rgba(44, 95, 45, 1);
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    opacity: 0;
+}
+
+.mission-text h2{
+
+    font-size: 38px;
+
+    color:rgba(44, 95, 45, 1);
+    
+}
+
+.mission-text p{
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* IMAGE */
+
+.mission-image{
+
+    opacity: 0;
+}
+
+.mission-image img{
+
+    width: 450px;
+height: 200px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    display: inline;
+}
+
+
+/* SCROLL ANIMATION */
+
+.mission-text.show{
+    animation: slideFromLeft 1.5s ease forwards;
+}
+
+.mission-image.show{
+    animation: slideFromRight 1.5s ease forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER SECTION */
+
+#footer {
+  background-color: #214212;
+
+  color: #f7e5bb;
+}
+
+
+/* WARLI ART SECTION */
+
+.footer-warli-container {
+  margin-top: 0px;
+  display:flex;
+  object-fit:fill;
+
+  justify-content:start;
+
+  /* gap: 20px; */
+
+  flex-wrap: nowrap;
+}
+
+.footer-warli {
+  width: 50%;
+
+  height: 180px;
+
+  object-fit: fill;
+
+  /* border-radius: 10px; */
+
+  display: inline;
+}
+
+#warlifoot1 {
+  margin-top: 30px;
+  width: 50%;
+  height: 150px;
+  object-fit: fill;
+  display: inline;
+}
+
+
+

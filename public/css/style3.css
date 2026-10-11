@@ -1,0 +1,583 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+/*  border: border-box;   this is wrong*/
+ /*to include border in height and width of the content */
+box-sizing: border-box;   /*this is right*/
+}
+/* .social-media-links {
+  height: 10px;
+  background-color: #f7e5bb;
+}
+
+.social-media-links {
+  color: white;              /*this is wrong : showing icons just below email, due to email
+  padding: 10px 20px;
+  margin: 0;
+} */ 
+
+/* WhatsApp floating icon */
+.whatsapp-float1 {
+
+  position: absolute;
+
+  margin-left: 185px;
+  margin-top: 15px;
+
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  background: #25D366;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  transition: 0.3s ease;
+
+  z-index: 10;
+}
+
+.whatsapp-float1 img {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float1:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.social-media-links {
+  background-color: #f7e5bb;
+  padding: 2px 20px;
+  font-size: 14px; 
+  color: RGB(44, 95, 45);
+
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔥 pushes icons to right */
+}
+
+.social-media-links p {
+  margin: 0;   /* remove default spacing */
+}
+
+/*hover states*/
+.social-media-links a {
+  color: #2C5F2D;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.social-media-links a:link {
+  color: #2C5F2D;
+}
+
+.social-media-links a:visited {
+  color: #2C5F2D;
+}
+
+.social-media-links a:hover {
+  color: #1e4a1f;  /* slightly darker on hover */
+  text-decoration: underline;  /* underline only on hover */
+}
+
+.social-media-links a:active {
+  color: #2C5F2D;
+}
+
+
+.icons img {
+  width: 20px;   /* control icon size */
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icons img:hover {
+  transform: scale(1.2); /*icon grow effect*/
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar {
+  height: 50px;
+  background-color: rgb(43, 94, 44);
+  display: flex;
+  align-items: center;
+  padding-left: 15px; 
+
+  justify-content: space-between; /* 🔥 spreads logo + menu */
+
+  padding: 0 20px;
+
+  position: sticky;   /* 🔥 key */
+  top: 0;             /* stick to top */
+  z-index: 1000;      /* stay above everything */
+}
+
+.nav-logo{
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover{
+    transform: scale(1.08);
+}
+
+/* LOGO */
+
+.logo{
+    background-image: url("logo.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+}
+
+
+/* MOTO IMAGE */
+
+.moto-img{
+    background-image: url("moto-img.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: left center;
+
+    width: 135px;
+
+    height: 30px;
+}
+
+.border {
+  border: 2px solid transparent;
+}
+
+.border:hover {
+  border: 1.5px solid white; 
+
+}
+/*nav-menu*/
+
+.nav-menu a {
+  color: white;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.nav-menu-links a:link {
+  color: white;
+}
+
+.nav-menu-links a:visited {                            /*work more on this section*/
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: #FB8B24;  /* slightly darker on hover */
+  text-decoration: none;  /* underline only on hover */
+}
+
+.nav-menu-links a:active {
+  color: #FB8B24;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+}
+
+
+/* NAV LINKS */
+.nav-menu a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 6px;
+}
+
+/* Hidden underline by default */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: white;
+
+  box-shadow: 0 0 8px white,
+              0 0 12px white;
+}
+
+/* Underline ONLY for active page */
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.page-hero {
+  height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero h1 {
+  font-size: 52px;
+}
+
+.page-hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* make hero a positioning context */
+.page-hero {
+  position: relative;
+}
+
+/* WhatsApp floating icon */
+.whatsapp-float {
+
+  position: absolute;
+
+  margin-left: 400px;
+  margin-top: 75px;
+
+  transform: translateY(-50%);
+
+  width: 72px;
+  height: 72px;
+
+  background: #25D366;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  transition: 0.3s ease;
+
+  z-index: 10;
+}
+
+.whatsapp-float img {
+  width: 108px;
+  height: 108px;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  padding: 60px 40px;
+}
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LEFT INFO */
+
+.contact-info-col {
+  flex: 1;
+  min-width: 260px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  background: white;
+
+  padding: 24px;
+  border-radius: 14px;
+
+  border-left: 4px solid #2C5F2D;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.contact-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  color: #2C5F2D;
+  margin-bottom: 6px;
+}
+
+/* RIGHT FORM */
+
+.contact-form-col {
+  flex: 2;
+  min-width: 320px;
+}
+
+.contact-form-col h2 {
+  font-size: 34px;
+  color: #2C5F2D;
+
+  margin-bottom: 25px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px;
+
+  border: 2px solid #ccc;
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2C5F2D;
+}
+
+.error {
+  border-color: red !important;
+}
+
+.field-error {
+  color: red;
+  font-size: 13px;
+}
+
+.submit-btn {
+  width: fit-content;
+
+  background: #FB8B24;
+  color: white;
+
+  border: none;
+  border-radius: 40px;
+
+  padding: 14px 34px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #d96f10;
+  transform: scale(1.04);
+}
+
+.form-success {
+  background: #d4edda;
+  color: #155724;
+
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+#footer {
+  background: #214212;
+  color: #f7e5bb;
+}
+
+.footer-container {
+  /* padding: 40px 20px; */
+   height: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 8px;
+}
+
+.footer-left,
+.footer-mid,
+.footer-right {
+  text-align: center;
+}
+
+.qr-image {
+  width: 110px;
+}
+
+.footer-mid h3 {
+  color: #FB8B24;
+  /* margin-bottom: 10px; */
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.footer-social img {
+  width: 22px;
+  filter: brightness(5);
+
+  transition: 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+/* WARLI ART SECTION */
+
+.footer-warli-container {
+  margin-top: 50px;
+  display:flex;
+  object-fit:fill;
+
+  justify-content:start;
+
+  /* gap: 20px; */
+
+  flex-wrap: nowrap;
+}
+
+.footer-warli {
+  width: 50%;
+
+  height: 180px;
+
+  object-fit: fill;
+
+  /* border-radius: 10px; */
+
+  display: block;
+}
+
+#warlifoot1 {
+  margin-top: 30px;
+  width: 50%;
+  height: 150px;
+  object-fit: fill;
+  display: block;
+}
+
+.footer-bottom {
+  background: #18330f;
+
+  text-align: center;
+  padding: 12px;
+
+  font-size: 13px;
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-menu-bar {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+}

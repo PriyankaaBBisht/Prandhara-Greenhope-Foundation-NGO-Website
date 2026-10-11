@@ -1,0 +1,752 @@
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+
+.whatsapp-float1 {
+
+  position: absolute;
+
+  margin-left: 185px;
+  margin-top: 15px;
+
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  background: #25D366;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  transition: 0.3s ease;
+
+  z-index: 10;
+}
+
+.whatsapp-float1 img {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float1:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+.social-media-links {
+  background-color: #f7e5bb;
+  padding: 2px 20px;
+ font-size: 20px;
+
+  /* font-weight: bold; */
+  color: RGB(44, 95, 45);
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔥 pushes icons to right */
+}
+
+.contact-number {
+  display: inline-block;   /* important for clean hover effect */
+  cursor: pointer;         /* shows it’s interactive */
+  text-decoration: none;
+}
+
+.contact-number:hover {
+  text-decoration: underline;
+}
+
+/*hover states*/
+.social-media-links a {
+  color: #2C5F2D;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.social-media-links a:link {
+  color: #2C5F2D;
+}
+
+.social-media-links a:visited {
+  color: #2C5F2D;
+}
+
+.social-media-links a:hover {
+  color: #1e4a1f;  /* slightly darker on hover */
+  text-decoration: underline;  /* underline only on hover */
+}
+
+.social-media-links a:active {
+  color: #2C5F2D;
+}
+
+
+.icons img {
+  width: 20px;   /* control icon size */
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icons img:hover {
+  transform: scale(1.2); /*icon grow effect*/
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar {
+  height: 50px;
+  background-color: rgb(43, 94, 44);
+  display: flex;
+  align-items: center;
+  padding-left: 15px; 
+
+  justify-content: space-between; /* 🔥 spreads logo + menu */
+
+  padding: 0 20px;
+
+  position: sticky;   /* 🔥 key */
+  top: 0;             /* stick to top */
+  z-index: 1000;      /* stay above everything */
+}
+
+.nav-logo{
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover{
+    transform: scale(1.08);
+}
+
+/* LOGO */
+
+.logo{
+    background-image: url("logo.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+}
+
+
+/* MOTO IMAGE */
+
+.moto-img{
+    background-image: url("moto-img.png");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: left center;
+
+    width: 135px;
+
+    height: 30px;
+}
+
+.border {
+  border: 2px solid transparent;
+}
+
+.border:hover {
+  border: 1.5px solid white; 
+
+}
+
+/*nav-menu*/
+
+.nav-menu a {
+  color: white;   /* RGB(44, 95, 45) */
+  text-decoration: none;  /* removes underline (optional) */
+}
+
+.nav-menu-links a:link {
+  color: white;
+}
+
+.nav-menu-links a:visited {                            /*work more on this section*/
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: #FB8B24;  /* slightly darker on hover */
+  text-decoration: none;  /* underline only on hover */
+}
+
+.nav-menu-links a:active {
+  color: #FB8B24;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+}
+
+
+/* NAV LINKS */
+.nav-menu a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 6px;
+}
+
+/* Hidden underline by default */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: white;
+
+  box-shadow: 0 0 8px white,
+              0 0 12px white;
+}
+
+/* Underline ONLY for active page */
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+
+/* =========================
+   MANAGEMENT TEAM SECTION
+========================= */
+
+.management-team-section {
+
+  width: 100%;
+
+  padding: 50px 5px;
+
+  background:  #f7e5bb;
+  text-align: center;
+
+  height: 30px;
+}
+
+.management-team-section h1 {
+
+  font-size: 42px;
+
+  color: #FB8B24;
+
+  letter-spacing: 2px;
+
+  font-weight: bolder;
+  
+}
+
+
+
+/* =========================
+   SLICK STYLE SLIDER
+========================= */
+
+.SliderW{
+    background-color: #214212;
+}
+
+.slider-container {
+background-color: #214212;
+width: 100%;
+height: 470px;
+position: relative;
+overflow: hidden;
+padding-top: 20px;
+}
+
+.slider {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  transition: 0.5s ease;
+}
+
+.slide {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  transition: all 0.5s ease;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 8px 20px rgb(155, 250, 255);
+  
+}
+
+.slide img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* ACTIVE IMAGE */
+
+.slide.active {
+
+  width: 650px;
+
+  height: 400px;
+
+  opacity: 1;
+
+  transform: scale(1);
+
+  z-index: 5;
+}
+
+/* SIDE IMAGES */
+
+.slide.side {
+
+  width: 230px;
+
+  height: 280px;
+
+  opacity: 0.75;
+
+  transform: scale(0.9);
+}
+
+/* DARK OVERLAY ON SIDE IMAGES */
+
+.slide.side::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.4);
+}
+
+/* HIDDEN IMAGES */
+
+.slide.hidden {
+
+  display: none;
+}
+
+/* =========================
+   DOTS
+========================= */
+
+.dots {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.dot {
+
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+
+  background:rgb(154, 202, 207);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+
+  transform: scale(1.15);
+}
+
+.dot.active {
+
+  background: white;
+
+  transform: scale(1.3);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .slide.active {
+
+    width: 500px;
+
+    height: 320px;
+  }
+
+  .slide.side {
+
+    width: 180px;
+
+    height: 220px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .slider {
+
+    gap: 10px;
+  }
+
+  .slide.active {
+
+    width: 75vw;
+
+    height: 240px;
+  }
+
+  .slide.side {
+
+    width: 18vw;
+
+    height: 160px;
+  }
+
+  .dots {
+
+    margin-top: 18px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media (max-width: 480px) {
+
+  .slide.active {
+
+    width: 72vw;
+
+    height: 200px;
+  }
+
+  .slide.side {
+
+    width: 16vw;
+
+    height: 120px;
+  }
+
+  .dot {
+
+    width: 11px;
+
+    height: 11px;
+  }
+}
+
+
+
+/* =========================
+   CONTACT INFO BAR
+========================= */
+
+.contact-info-bar {
+
+  width: 100%;
+
+  background: #f7e5bb;
+
+  padding: 30px 40px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  flex-wrap: nowrap;
+}
+
+/* EACH BOX */
+
+.info-box {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  width: 30%;
+}
+
+/* ICON */
+
+.info-box img {
+
+  width: 38px;
+
+  height: 38px;
+
+  flex-shrink: 0;
+}
+
+/* HEADINGS */
+
+.info-box h3 {
+
+  color: rgb(43, 94, 44);
+
+  margin-bottom: 6px;
+
+ font-size: 20px;
+
+  font-weight: bold;
+}
+
+/* TEXT */
+
+.info-box p {
+
+  color: #333;
+
+ font-size: 20px;
+
+  font-weight: bold;
+
+  line-height: 1.5;
+}
+
+/* EMAIL LINK */
+
+.info-box a {
+
+  color: #333;
+  font-size: 20px;
+
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.info-box a:hover {
+
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .contact-info-bar {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 25px 20px;
+  }
+
+  .info-box {
+
+    width: 100%;
+  }
+}
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+#footer {
+  background: #214212;
+  color: #f7e5bb;
+}
+
+.footer-container {
+  /* padding: 40px 20px; */
+   height: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 8px;
+}
+
+.footer-left,
+.footer-mid,
+.footer-right {
+  text-align: center;
+}
+
+.qr-image {
+  width: 110px;
+}
+
+.footer-mid h3 {
+  color: #FB8B24;
+  /* margin-bottom: 10px; */
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.footer-social img {
+  width: 22px;
+  filter: brightness(5);
+
+  transition: 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+/* WARLI ART SECTION */
+
+.footer-warli-container {
+  margin-top: 50px;
+  display:flex;
+  object-fit:fill;
+
+  justify-content:start;
+
+  /* gap: 20px; */
+
+  flex-wrap: nowrap;
+}
+
+.footer-warli {
+  width: 50%;
+
+  height: 180px;
+
+  object-fit: fill;
+
+  /* border-radius: 10px; */
+
+  display: block;
+}
+
+#warlifoot1 {
+  margin-top: 30px;
+  width: 50%;
+  height: 150px;
+  object-fit: fill;
+  display: block;
+}
+
+.footer-bottom {
+  background: #18330f;
+
+  text-align: center;
+  padding: 12px;
+
+  font-size: 13px;
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-menu-bar {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+}
+
+
+
+    

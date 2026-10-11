@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Member ID Card | Prandhara Green Hope Foundation</title>
+  <meta name="description" content="Generate and download your official digital Prandhara Green Hope Foundation Identity Card. Enter your email to search and render your card instantly on canvas.">
+  <link rel="stylesheet" href="css/style-pages.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Contact/Social Header Bar -->
+  <div class="social-media-links">
+    <p class="contact-number">Contact Us: +91 7559281109 / +91 9270945210</p>
+    
+    <!-- WhatsApp Floating Badge -->
+    <a class="whatsapp-float1" href="https://wa.me/919270945210" target="_blank" aria-label="Chat on WhatsApp">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+    
+    <p>Email: <a href="mailto:prandhara@gmail.com">prandhara@gmail.com</a></p>
+    
+    <div class="icons">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <img src="icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <img src="icons/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <img src="icons/youtube.svg" alt="YouTube">
+      </a>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Prandhara Green Hope Foundation Home">
+      <div class="logo"></div>
+      <div class="moto-img"></div>
+    </a>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="management.html">Our Management Team</a>
+      <a href="projects.html">Our Projects</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="volunteer.html">Volunteer</a>
+      
+      <!-- Explore Dropdown -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Explore</a>
+        <div class="dropdown-content">
+          <a href="donations.html">Where Your Donations Go?</a>
+          <a href="solar.html">Solar Energy</a>
+          <a href="projects.html">Tree Plantation Drives</a>
+        </div>
+      </div>
+      
+      <a href="member-apply.html">Member Apply</a>
+      <a href="id-download.html" class="active">ID Card Download</a>
+      <a href="donors.html">List Of Donors</a>
+    </div>
+  </div>
+
+  <!-- Page Hero Banner -->
+  <div class="page-hero">
+    <h1>Digital Member ID Card</h1>
+    <p>Verify your details, preview your official credentials in real-time, and download your card</p>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+    <div class="card-generator-wrap">
+      
+      <!-- Search Panel -->
+      <section class="search-card">
+        <h2>Download Your Identity Card</h2>
+        <p>Enter the email address you used during member registration to verify your membership and generate your high-resolution ID card.</p>
+        
+        <form id="searchMemberForm" novalidate>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label for="searchEmail" style="text-align: left;">Email Address *</label>
+            <input type="email" id="searchEmail" placeholder="your@email.com" required>
+            <span class="field-error" id="searchError"></span>
+          </div>
+          
+          <button type="submit" class="submit-btn" style="margin-top: 5px;">Verify & Generate</button>
+        </form>
+      </section>
+
+      <!-- Preview Section - Hidden by default until search is successful -->
+      <section id="cardPreviewWrap" class="card-preview-section" style="display: none;">
+        
+        <div style="text-align: center; color: var(--primary-green);">
+          <h3 style="font-size: 22px; margin-bottom: 5px;">✨ Card Generated Successfully!</h3>
+          <p style="font-size: 14px; color: #555;">Move your mouse over the card to experience the dynamic 3D perspective tilt effect.</p>
+        </div>
+
+        <!-- 3D Perspective Card Container -->
+        <div class="canvas-card-wrap">
+          <canvas id="idCardCanvas"></canvas>
+        </div>
+
+        <!-- Download Button -->
+        <button id="downloadIdBtn" class="download-action-btn">
+          📥 Download high-res PNG
+        </button>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Unified Footer Section -->
+  <footer id="footer">
+    <div class="footer-container">
+      
+      <!-- Left Side - Scan to Donate -->
+      <div class="footer-left">
+        <img src="images/qr-code.png" alt="Scan to Donate QR Code" class="qr-image" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=prandhara@upi'">
+        <p>Scan to Donate</p>
+      </div>
+
+      <!-- Center Side - Address info -->
+      <div class="footer-mid">
+        <h3>Prandhara Green Hope Foundation</h3>
+        <p>
+          Pethe Nagar Road, Near Aamen Chauk,<br>
+          Shravasti Colony, Bhawsinghpura,<br>
+          Aurangabad, Maharashtra - 431001
+        </p>
+      </div>
+
+      <!-- Right Side - Contacts & Social Links -->
+      <div class="footer-right">
+        <p class="contact-info">
+          Call: +91 7559281109 / +91 9270945210<br>
+          Email: prandhara@gmail.com
+        </p>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="icons/instagram.svg" alt="Instagram"></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="icons/facebook.svg" alt="Facebook"></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Warli Art Strip -->
+    <div class="footer-warli-container">
+      <img id="warlifoot1" src="images/warli-footer1.png" alt="Warli Art Border Decor" class="footer-warli" onerror="this.style.display='none'">
+      <img src="images/warli-footer2.png" alt="Warli Art Border Decor" class="footer-warli" onerror="this.style.display='none'">
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Prandhara Green Hope Foundation. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Linkage -->
+  <script src="js/script.js"></script>
+</body>
+</html>
